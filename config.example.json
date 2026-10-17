@@ -1,0 +1,102 @@
+{
+  "audio": {
+    "input_device": null,
+    "output_device": null,
+    "sample_rate": 16000,
+    "frame_ms": 30,
+    "vad_aggressiveness": 2,
+    "speech_min_ms": 250,
+    "silence_end_ms": 750,
+    "max_utterance_s": 30.0,
+    "echo_gate_tail_ms": 350
+  },
+  "wake": {
+    "enabled": true,
+    "engine": "vosk",
+    "phrases": [
+      "هی جاسم",
+      "سلام جاسم",
+      "جاسم",
+      "hey jasem",
+      "hi jasem"
+    ],
+    "fa_model_dir": "",
+    "en_model_dir": "",
+    "match_cooldown_ms": 1500,
+    "barge_in": true,
+    "stop_phrases": [
+      "ساکت شو",
+      "بس کن",
+      "stop",
+      "خفه شو"
+    ]
+  },
+  "stt": {
+    "engine": "faster-whisper",
+    "model_size": "small",
+    "device": "cpu",
+    "compute_type": "int8",
+    "language": "fa",
+    "beam_size": 5,
+    "correction_enabled": true,
+    "vocabulary": [],
+    "low_confidence_threshold": 0.55
+  },
+  "tts": {
+    "engine": "edge",
+    "edge_voice": "fa-IR-DilaraNeural",
+    "edge_rate": "+0%",
+    "edge_pitch": "+0Hz",
+    "piper_voice": "gyro",
+    "piper_length_scale": 1.0,
+    "convert_numbers": "auto",
+    "sentence_max_chars": 280,
+    "ack_voice": "short"
+  },
+  "ai": {
+    "provider": "openai-compatible",
+    "base_url": "https://api.openai.com/v1",
+    "model": "gpt-4o-mini",
+    "api_key_env": "OPENAI_API_KEY",
+    "temperature": 0.8,
+    "max_tokens": 400,
+    "timeout_s": 45.0,
+    "memory_enabled": false
+  },
+  "personality": {
+    "sarcasm": 0.6,
+    "humor": 0.6,
+    "formality": 0.2,
+    "response_length": "short",
+    "warmth": 0.8
+  },
+  "automation": {
+    "enabled": true,
+    "permissions": {},
+    "confirm_unknown": true,
+    "search_roots": [],
+    "search_max_results": 20,
+    "search_timeout_s": 15.0,
+    "read_max_bytes": 262144,
+    "audit_enabled": true
+  },
+  "conversation": {
+    "session_timeout_s": 45.0,
+    "history_max_turns": 20,
+    "persist_history": true
+  },
+  "ui": {
+    "theme": "dark-navy",
+    "accent": "cyan",
+    "always_on_top": false,
+    "start_minimized": false,
+    "close_to_tray": true,
+    "hotkey_ptt": "ctrl+alt+j",
+    "hotkey_mute": "ctrl+alt+m"
+  },
+  "system": {
+    "autostart": false,
+    "listen_on_start": true,
+    "mic_muted_on_start": false
+  }
+}
